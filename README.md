@@ -34,4 +34,5 @@ For example, this is the part of .cshtml of the grid declaration:
 
 It will produce:
 
+![alt grid01](https://github.com/surya-rakanta/LPContribMvc/blob/main/LPMvc01.png)
 
