@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LPContribMvc", "LPContribMvc.csproj", "{0B24BA9A-B17E-4547-B6D5-7C349FE67507}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B24BA9A-B17E-4547-B6D5-7C349FE67507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B24BA9A-B17E-4547-B6D5-7C349FE67507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B24BA9A-B17E-4547-B6D5-7C349FE67507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B24BA9A-B17E-4547-B6D5-7C349FE67507}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E76A4F8-1C91-429E-A02E-5043412CB82C}
+	EndGlobalSection
+EndGlobal

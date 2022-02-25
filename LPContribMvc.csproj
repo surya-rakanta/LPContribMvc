@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{0B24BA9A-B17E-4547-B6D5-7C349FE67507}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <LangVersion>8.0</LangVersion>
+    <AssemblyName>LPContribMvc</AssemblyName>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Mvc">
+      <HintPath>..\packages\Mvc3Futures.3.0.20105.0\lib\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc" />
+    <Reference Include="System">
+      <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LPContribMvc.ActionResults\ExpressionToRouteValueConverter.cs" />
+    <Compile Include="LPContribMvc.ActionResults\HeadResult.cs" />
+    <Compile Include="LPContribMvc.ActionResults\IControllerExpressionContainer.cs" />
+    <Compile Include="LPContribMvc.ActionResults\RedirectToRouteResult.cs" />
+    <Compile Include="LPContribMvc.ActionResults\XmlResult.cs" />
+    <Compile Include="LPContribMvc.Attributes\DerivedTypeBinderAwareAttribute.cs" />
+    <Compile Include="LPContribMvc.Binders\DerivedTypeModelBinder.cs" />
+    <Compile Include="LPContribMvc.Binders\DerivedTypeModelBinderCache.cs" />
+    <Compile Include="LPContribMvc.Binders\IPropertyNameProvider.cs" />
+    <Compile Include="LPContribMvc.Binders\ITypeStampOperator.cs" />
+    <Compile Include="LPContribMvc.Binders\TypeStampOperator.cs" />
+    <Compile Include="LPContribMvc.EnumerableExtensions\EnumerableExtensions.cs" />
+    <Compile Include="LPContribMvc.Filters\LayoutAttribute.cs" />
+    <Compile Include="LPContribMvc.Filters\ModelStateToTempDataAttribute.cs" />
+    <Compile Include="LPContribMvc.Filters\PassParametersDuringRedirectAttribute.cs" />
+    <Compile Include="LPContribMvc.Filters\PreconditionFilter.cs" />
+    <Compile Include="LPContribMvc.Filters\PredicatePreconditionFilter.cs" />
+    <Compile Include="LPContribMvc.Filters\RegExPreconditionFilter.cs" />
+    <Compile Include="LPContribMvc.Filters\RescueAttribute.cs" />
+    <Compile Include="LPContribMvc.Filters\TempDataToViewDataAttribute.cs" />
+    <Compile Include="LPContribMvc.Pagination\CustomPagination.cs" />
+    <Compile Include="LPContribMvc.Pagination\IPagination.cs" />
+    <Compile Include="LPContribMvc.Pagination\LazyPagination.cs" />
+    <Compile Include="LPContribMvc.Pagination\PaginationHelper.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\ApplicationBus.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\AssemblyResourceLocator.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\AssemblyResourceManager.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\EmbeddedResourceController.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\IApplicationBus.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\ICommandMessage.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\ICommandResult.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\IEventMessage.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\IMessageHandler.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\IMessageHandlerFactory.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\IQueryMessage.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\MapExtensions.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\MessageHandler.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\MessageHandlerFactory.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\PortableAreaContent.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\PortableAreaMap.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\PortableAreaRegistration.cs" />
+    <Compile Include="LPContribMvc.PortableAreas\PortableAreaStartupMessage.cs" />
+    <Compile Include="LPContribMvc.Properties\Settings.cs" />
+    <Compile Include="LPContribMvc.Routing\MvcRoute.cs" />
+    <Compile Include="LPContribMvc.Routing\RegexRoute.cs" />
+    <Compile Include="LPContribMvc.Services\EmailMetadata.cs" />
+    <Compile Include="LPContribMvc.Services\EmailTemplateService.cs" />
+    <Compile Include="LPContribMvc.Services\IEmailTemplateService.cs" />
+    <Compile Include="LPContribMvc.Services\IViewStreamReader.cs" />
+    <Compile Include="LPContribMvc.Sorting\SortDirection.cs" />
+    <Compile Include="LPContribMvc.Sorting\SortExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.DataList\DataList.cs" />
+    <Compile Include="LPContribMvc.UI.DataList\DataListExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.DerivedTypeModelBinder\HtmlExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.Grid.ActionSyntax\ActionSyntaxExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.Grid.Syntax\IGrid.cs" />
+    <Compile Include="LPContribMvc.UI.Grid.Syntax\IGridWithOptions.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\AutoColumnBuilder.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\ColumnBuilder.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\Grid.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\GridColumn.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\GridExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\GridModel.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\GridRenderer.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\GridRow.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\GridRowViewData.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\GridSections.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\GridSortOptions.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\HtmlTableGridRenderer.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\IGridColumn.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\IGridModel.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\IGridRenderer.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\IGridSections.cs" />
+    <Compile Include="LPContribMvc.UI.Grid\RenderingContext.cs" />
+    <Compile Include="LPContribMvc.UI.Html\HtmlHelperExtension.cs" />
+    <Compile Include="LPContribMvc.UI.Html\ModelVisualizerExtension.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Attributes\CanDeleteAllAttribute.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Attributes\DisplayOrderAttribute.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Attributes\ExampleAttribute.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Attributes\LabelAttribute.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Attributes\NoAddAttribute.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Attributes\NoDeleteAttribute.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Attributes\PartialViewAttribute.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Conventions\DateTimePropertyConvention.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Conventions\DefaultNameConvention.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Conventions\DefaultPropertyConvention.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Conventions\EnumPropertyConvention.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Conventions\GuidPropertyConvention.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Conventions\IPropertyViewModelFactory.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Conventions\IPropertyViewModelNameConvention.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Conventions\IRequireViewModelFactory.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Conventions\PropertyInfoExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Helpers\DisplayOrderExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Helpers\ExpressionHelper.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Helpers\ReflectionHelper.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.InputSpecification\DefaultTypeViewModelFactoryConvention.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.InputSpecification\IInputSpecification.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.InputSpecification\Input.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.InputSpecification\InputPropertySpecification.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.InputSpecification\InputTypeSpecification.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.InputSpecification\ITypeViewModelFactory.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.InputSpecification\IViewModelFactory.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.InputSpecification\RenderInputBuilderException.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.InputSpecification\ViewModelFactory.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.ViewEngine\AssemblyResourceProvider.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.ViewEngine\AssemblyResourceStore.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.ViewEngine\AssemblyResourceVirtualFile.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.ViewEngine\InputBuilderViewEngine.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Views\DisplayPartial.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Views\HtmlDisplayExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Views\HtmlExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Views\IInputSpecificationExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Views\ModelType.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Views\Partial.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Views\PropertyViewModel.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder.Views\TypeViewModel.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder\ArrayPropertyConvention.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder\ArrayTypeViewModelExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder\DefaultPropertyConventionsFactory.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder\DefaultTypeConventionsFactory.cs" />
+    <Compile Include="LPContribMvc.UI.InputBuilder\InputBuilder.cs" />
+    <Compile Include="LPContribMvc.UI.MenuBuilder\ActionMenuItem.cs" />
+    <Compile Include="LPContribMvc.UI.MenuBuilder\AuthorizeAttributeExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.MenuBuilder\Menu.cs" />
+    <Compile Include="LPContribMvc.UI.MenuBuilder\MenuBuilderHtmlExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.MenuBuilder\MenuHelpText.cs" />
+    <Compile Include="LPContribMvc.UI.MenuBuilder\MenuItem.cs" />
+    <Compile Include="LPContribMvc.UI.MenuBuilder\MenuList.cs" />
+    <Compile Include="LPContribMvc.UI.MenuBuilder\MenuTitle.cs" />
+    <Compile Include="LPContribMvc.UI.MenuBuilder\OpenAuthorizeAttribute.cs" />
+    <Compile Include="LPContribMvc.UI.MenuBuilder\SecureActionMenuItem.cs" />
+    <Compile Include="LPContribMvc.UI.Pager\Pager.cs" />
+    <Compile Include="LPContribMvc.UI.Pager\PaginationExtensions.cs" />
+    <Compile Include="LPContribMvc.UI.ParamBuilder\ExplicitFacadeDictionary.cs" />
+    <Compile Include="LPContribMvc.UI.ParamBuilder\ParamBuilder.cs" />
+    <Compile Include="LPContribMvc.UI.ParamBuilder\ParamNames.cs" />
+    <Compile Include="LPContribMvc.UI.ParamBuilder\Params.cs" />
+    <Compile Include="LPContribMvc.UI.ReturnUrl\IReturnUrlManager.cs" />
+    <Compile Include="LPContribMvc.UI.ReturnUrl\ReturnUrlManager.cs" />
+    <Compile Include="LPContribMvc.UI\CleanTagBuilder.cs" />
+    <Compile Include="LPContribMvc\Bus.cs" />
+    <Compile Include="LPContribMvc\ControllerExtensions.cs" />
+    <Compile Include="LPContribMvc\DictionaryExtensions.cs" />
+    <Compile Include="LPContribMvc\Hash.cs" />
+    <Compile Include="LPContribMvc\ThreadSafeDictionary.cs" />
+    <Compile Include="LPContribMvc\UrlHelperExtensions.cs" />
+    <Compile Include="LPContribMvc\ViewDataExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LPContribMvc.PortableAreas\Web.config" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.Array.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.Array.Master" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.ArrayAddButton.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.ArrayRemoveButton.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.Boolean.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.DateTime.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.Display.Master" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.DisplayInline.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.DisplayLabel.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.DisplayParagraph.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.Enum.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.Field.Master" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.Form.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.Guid.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.HiddenField.Master" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.Int32.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.MultilineText.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.RadioButtons.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.ReadOnly.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.Row.Master" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.String.aspx" />
+    <EmbeddedResource Include="LPContribMvc.UI.InputBuilder.Views\InputBuilders.Submit.aspx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
